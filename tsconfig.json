@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/src",  // Ensure the compiled JS files are placed here
+    "outDir": "./dist",  // Ensure the compiled JS files are placed here
     "rootDir": "./src",  // Ensure your source files are in the src directory
     "target": "es2020",                   // Use ES2020 as the target JavaScript version
     "module": "commonjs",                 // Ensure CommonJS module system for Node.js compatibility
