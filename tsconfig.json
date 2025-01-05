@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "rootDir": "./",
+    "outDir": "./src/dist",  // Ensure the compiled JS files are placed here
+    "rootDir": "./src",  // Ensure your source files are in the src directory
     "target": "es2020",                   // Use ES2020 as the target JavaScript version
     "module": "commonjs",                 // Ensure CommonJS module system for Node.js compatibility
     "experimentalDecorators": true,       // Enable experimental decorators for TypeORM, etc.
@@ -11,9 +11,7 @@
     "skipLibCheck": true,                 // Skips type checking of declaration files for faster builds
     "strictPropertyInitialization": false // Disable strict property initialization check (if needed)
   },
-  "include": [
-    "src/**/*"                            // Include all files inside the src folder
-  ],
+   "include": ["src/**/*.ts"],
   "exclude": [
     "node_modules",                       // Exclude node_modules folder
     "tests",                              // Exclude the tests folder
