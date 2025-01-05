@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "target": "es2020",                   // Use ES2020 as the target JavaScript version
+    "module": "commonjs",                 // Ensure CommonJS module system for Node.js compatibility
+    "experimentalDecorators": true,       // Enable experimental decorators for TypeORM, etc.
+    "emitDecoratorMetadata": true,        // Necessary for TypeORM and other metadata-based libraries
+    "strict": true,                       // Enable strict type-checking options
+    "esModuleInterop": true,              // Allows default import syntax with CommonJS modules
+    "skipLibCheck": true,                 // Skips type checking of declaration files for faster builds
+    "strictPropertyInitialization": false // Disable strict property initialization check (if needed)
+  },
+  "include": [
+    "src/**/*"                            // Include all files inside the src folder
+  ],
+  "exclude": [
+    "node_modules",                       // Exclude node_modules folder
+    "tests",                              // Exclude the tests folder
+    "**/*.spec.ts",                       // Exclude TypeScript spec files
+    "**/*.test.ts"                        // Exclude TypeScript test files
+  ]
+}
