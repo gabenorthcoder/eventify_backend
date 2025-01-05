@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "./dist/",
+    "rootDir": "./",
     "target": "es2020",                   // Use ES2020 as the target JavaScript version
     "module": "commonjs",                 // Ensure CommonJS module system for Node.js compatibility
     "experimentalDecorators": true,       // Enable experimental decorators for TypeORM, etc.
