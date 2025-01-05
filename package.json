@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "vercel-build": "echo hello",
-    "build": "tsc && ls dist",
+    "build": "tsc",
     "start": "node dist/src/server.js",
     "dev": "nodemon --config ./nodemon.json --exec tsx src/server.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
