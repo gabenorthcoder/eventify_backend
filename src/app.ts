@@ -1,5 +1,4 @@
-import express from "express";
-import path from 'node:path';
+import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
@@ -48,10 +47,9 @@ const swaggerDefinition = {
 };
 ;
 
-const apiPath = path.join(__dirname, "src", "adapter", "routes", "*", "*.{ts,js}");
 const options = {
   swaggerDefinition,
-  apis: [apiPath],
+  apis: ["./src/adapter/routes/*/*.ts"], 
 };
 
 const swaggerSpec = swaggerJSDoc(options);
@@ -63,5 +61,8 @@ app.use("/users", userRoutes);
 app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
 app.use("/super-admin", superAdminRoutes);
+app.use("*", (req: Request, res: Response) => {
+  res.redirect("https://events-platform-coral-rho.vercel.app");
+});
 
 export { app };

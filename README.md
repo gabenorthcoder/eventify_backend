@@ -4,6 +4,8 @@
 
 The Events Platform Backend is a Node.js application built with TypeScript and Express. It serves as the backend for an events management system, allowing users to create, manage, and sign up for events. The backend integrates with a PostgreSQL database using TypeORM and provides a RESTful API for the frontend application.
 
+Production: https://eventify-backend-c7ua.onrender.com/
+
 ## Features
 
 - User authentication and authorization
@@ -35,8 +37,8 @@ The Events Platform Backend is a Node.js application built with TypeScript and E
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/events-platform-backend.git
-   cd events-platform-backend
+   git clone 
+   cd 
    ```
 
 2. **Create a PostgreSQL database**:
@@ -93,7 +95,7 @@ The Events Platform Backend is a Node.js application built with TypeScript and E
 
 The API is documented using Swagger. Once the server is running, you can access the documentation at:
 
-http://localhost:3000/api-docs
+https://eventify-backend-c7ua.onrender.com/api-docs/
 
 ## Testing
 
