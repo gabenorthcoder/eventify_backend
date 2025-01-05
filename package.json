@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+  
     "build": "tsc",
     "start": "node dist/src/server.js",
+    "deploy": "npm install && npm run build",
     "dev": "nodemon --config ./nodemon.json --exec tsx src/server.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "migration:generate": "npm run typeorm -- migration:generate -d ./src/infrastructure/repository/dataSource.ts",
