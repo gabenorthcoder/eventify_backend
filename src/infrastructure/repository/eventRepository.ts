@@ -91,14 +91,16 @@ export class EventRepository {
     const skip = (page - 1) * limit;
 
 
-    const [data, total] = await this.eventRepository.findAndCount({
+    let [data, total] = await this.eventRepository.findAndCount({
       order: {
         [sortBy]: sortOrder,
       },
       skip,
       take: limit,
     });
-
+    data = data.filter((event: Event) => {
+      return new Date(event.date) >= new Date();
+    });
     return {
       data,
       total,
