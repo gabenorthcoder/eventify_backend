@@ -4,7 +4,7 @@
 
 The Events Platform Backend is a Node.js application built with TypeScript and Express. It serves as the backend for an events management system, allowing users to create, manage, and sign up for events. The backend integrates with a PostgreSQL database using TypeORM and provides a RESTful API for the frontend application.
 
-Production: https://eventify-backend-c7ua.onrender.com/
+Production: goldfish-app-h4yjf.ondigitalocean.app
 
 ## Features
 
@@ -95,7 +95,7 @@ Production: https://eventify-backend-c7ua.onrender.com/
 
 The API is documented using Swagger. Once the server is running, you can access the documentation at:
 
-https://eventify-backend-c7ua.onrender.com/api-docs/
+https://goldfish-app-h4yjf.ondigitalocean.app/api-docs
 
 ## Testing
 
