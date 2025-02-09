@@ -1,5 +1,6 @@
 import { AppDataSource } from "./dataSource";
 import { Event } from "./entities/event";
+import {MoreThanOrEqual} from "typeorm";
 
 
 export interface PaginationParams {
@@ -91,16 +92,17 @@ export class EventRepository {
     const skip = (page - 1) * limit;
 
 
-    let [data, total] = await this.eventRepository.findAndCount({
+    const [data, total] = await this.eventRepository.findAndCount({
+      where: {
+        date: MoreThanOrEqual(new Date()), // ✅ Fetch only future events
+      },
       order: {
         [sortBy]: sortOrder,
       },
       skip,
       take: limit,
     });
-    data = data.filter((event: Event) => {
-      return new Date(event.date) >= new Date();
-    });
+
     return {
       data,
       total,
@@ -110,3 +112,5 @@ export class EventRepository {
   }
   
 }
+
+
